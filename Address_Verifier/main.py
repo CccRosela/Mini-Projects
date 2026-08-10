@@ -1,3 +1,4 @@
+# Text color addition
 from color import color
 
 def addressVal(address,name):
