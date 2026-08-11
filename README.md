@@ -15,3 +15,8 @@ A variety of mini-projects for practice. Please find a small description of each
 
 # Packages:
     colorist ---→ https://pypi.org/project/colorist/
+    requests ---→ https://pypi.org/project/requests/
+    beautifulsoup4 ---→ https://pypi.org/project/beautifulsoup4/
+    pandas ---→ https://pypi.org/project/pandas/
+    pprintpp ---→ https://pypi.org/project/pprintpp/
+    
