@@ -32,12 +32,10 @@ for row in unedited_data[1:]:
 
     # checking the length of the dataframe each loop iteration
     df.loc[len(df)] = individual_row_data
-pprint(df)
+
+def get_df():
+    return df
 
 # Save the dataframe to a CSV file
 # df.to_csv('fruit_nutrition.csv', index=False)
-
-
-#To do:
-        # ask user which fruit they want to know about, present result based on category
     
