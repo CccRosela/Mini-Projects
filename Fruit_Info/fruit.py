@@ -32,10 +32,10 @@ for row in unedited_data[1:]:
 
     # checking the length of the dataframe each loop iteration
     df.loc[len(df)] = individual_row_data
+# print(df)
 
 def get_df():
     return df
 
 # Save the dataframe to a CSV file
 # df.to_csv('fruit_nutrition.csv', index=False)
-    
