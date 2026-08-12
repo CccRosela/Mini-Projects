@@ -7,10 +7,14 @@ A variety of mini-projects for practice. Please find a small description of each
     - Text Editing <br>→ replace {red}, {blue} → terminal colors → replace text emojis (e.g: `:)`,`:D`) with real emojis.
 3. Fruit_Info
     - Website Scraping and dataframe creation/selection <br>→ `scrape fruit nutrition data` from a Website → organize data into a `pandas Dataframe` → allow user to select a fruit and view specific nutrition facts.
+4. Goodbye
+    - ...
 4. Math_Expression
     - Calculation <br>→ split user input into number/operator/number → perform `+`, `-`, `*`, or `/`.
 5. Meal_Time
     - Time Variant <br>→ time input from user→ convert `HH:MM` into decimal hours → check if it’s breakfast, lunch, or dinner time.
+6. TextFonts
+    - tansforms text via fonts in package pyfiglet
 6. Vending_Machine
     - Product selection <br>→ user chooses a `product number` → enter payment → check if the amount is enough → confirm the purchase or calculate remaining amount/change.
 
@@ -21,4 +25,5 @@ A variety of mini-projects for practice. Please find a small description of each
     beautifulsoup4 ---→ https://pypi.org/project/beautifulsoup4/
     pandas ---→ https://pypi.org/project/pandas/
     pprintpp ---→ https://pypi.org/project/pprintpp/
+    pyfiglet ---→ https://pypi.org/project/pyfiglet/
     
