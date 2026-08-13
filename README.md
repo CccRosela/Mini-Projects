@@ -8,7 +8,7 @@ A variety of mini-projects for practice. Please find a small description of each
 3. Fruit_Info
     - Website Scraping and dataframe creation/selection <br>→ `scrape fruit nutrition data` from a Website → organize data into a `pandas Dataframe` → allow user to select a fruit and view specific nutrition facts.
 4. Goodbye
-    - ...
+    - Text Formatting <br>→ user enters multiple names until they type exit → display a formatted goodbye message, depending on how many names the user entered.
 4. Math_Expression
     - Calculation <br>→ split user input into number/operator/number → perform `+`, `-`, `*`, or `/`.
 5. Meal_Time
@@ -19,7 +19,17 @@ A variety of mini-projects for practice. Please find a small description of each
     - Product selection <br>→ user chooses a `product number` → enter payment → check if the amount is enough → confirm the purchase or calculate remaining amount/change.
 
 
-# Packages:
+# Other Ideas waiting to be implemented: U5
+    # prof - generate 10 random math problems, at the end user gets score depending on how well they did.
+    # bitcoin - get API bitcoin value (maybe other funds as well, commodities [gold], derivatives, to be implemented... {depends on complexity, might require a repository by itself...}), user types in how much they want to purchase, adds it to their 'wallet'
+    # unit tests ---> test output of past made projects
+    # implement a few File I/O's (on past projects)
+    # regexes to a few projects  (e.g: address_verifier)
+    # add more classes 
+    # ...
+
+
+# Packages Used:
     colorist ---→ https://pypi.org/project/colorist/
     requests ---→ https://pypi.org/project/requests/
     beautifulsoup4 ---→ https://pypi.org/project/beautifulsoup4/
