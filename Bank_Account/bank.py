@@ -1,5 +1,3 @@
-import re
-
 accounts = [
     {"name" : "Rosela" , "balance" : 100},
     {"name" : "Dexter" , "balance" : 50},
@@ -57,7 +55,7 @@ def main():
             
             if balance >= w:
                 withdraw(w)
-                print(f"Balance: {balance}")
+                print(f"Final Balance: {balance}")
                 break
             else:
                 raise ValueError

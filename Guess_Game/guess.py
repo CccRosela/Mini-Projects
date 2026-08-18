@@ -1,5 +1,4 @@
 import random
-from colorist import ColorHex
 
 def random_num(lv):
     x = random.randint(1, lv)

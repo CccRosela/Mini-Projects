@@ -3,27 +3,31 @@ A variety of mini-projects for practice. Please find a small description of each
 
 1. Address_Verifier
     - Name + email <br>→ check if the email contains `:` or `@` → print a colored valid/invalid message → welcome the user if valid.
-2. Daily_Challenge
+    - Email Regex Validation <br>→ validate email format using `regex` → check for `word@word.extension` pattern → support optional subdomains (e.g. `univie.ac.at`) → match against common domain extensions → case-insensitive matching.
+    - IP Address Validation <br>→ check IP against a regex pattern → verify each segment is `0–255` (with special case `0.0.0.0`).
+2. Bank_Account
+    - Account Management <br>→ user enters their name → match against a list of accounts → display current balance → loop for `deposit and withdrawal amounts` → validate input → update and display balance.
+3. Daily_Challenge
     - Array searching <br>→ given an array of numbers and a target value → find `two unique numbers` whose sum equals the target → return their indices in ascending order → return `"Target not found"` if no matching pair exists.
-3. Emoji_Text
+4. Emoji_Text
     - Text Editing <br>→ replace {red}, {blue} → terminal colors → replace text emojis (e.g: `:)`,`:D`) with real emojis.
-4. Food_Chain
+5. Food_Chain
     - List/Array Processing <br>→ given an array of `[predator, prey]` pairs → identify apex predator  → follow the food chain own to the bottom of the chain → return the chain as an array of strings.
-5. Fruit_Info
+6. Fruit_Info
     - Website Scraping and dataframe creation/selection <br>→ `scrape fruit nutrition data` from a Website → organize data into a `pandas Dataframe` → allow user to select a fruit and view specific nutrition facts.
-6. Goodbye
+7. Goodbye
     - Text Formatting <br>→ user enters multiple names until they type exit → display a `formatted goodbye message`, depending on how many names the user entered.
-7. Guess_Game
+8. Guess_Game
     - Random number generation <br>→ user chooses a level (maximum number) → computer generates a random number → user guesses the number → provides higher/lower hints for incorrect guesses → continue until the correct number is guessed (says how many times the user guessed) or the user types exit.
-8. Math_10_Quiz
+9. Math_10_Quiz
     - Random math quiz <br>→ generate `10 random addition, subtraction, or multiplication problems` → user enters an answer for each → keep track of correct answers → display the final score.
-9. Math_Expression
+10. Math_Expression
     - Calculation <br>→ split user input into number/operator/number → perform `+`, `-`, `*`, or `/`.
-10. Meal_Time
+11. Meal_Time
     - Time Variant <br>→ time input from user→ convert `HH:MM` into decimal hours → check if it’s breakfast, lunch, or dinner time.
-11. TextFonts
+12. TextFonts
     - tansforms text via fonts in package `pyfiglet`.
-12. Vending_Machine
+13. Vending_Machine
     - Product selection <br>→ user chooses a `product number` → enter payment → check if the amount is enough → confirm the purchase or calculate remaining amount/change.
 
 
@@ -31,9 +35,8 @@ A variety of mini-projects for practice. Please find a small description of each
     # bitcoin - get API bitcoin value (maybe other funds as well, commodities [gold], derivatives, to be implemented... {depends on complexity, might require a repository by itself...}), user types in how much they want to purchase, adds it to their 'wallet'
     # unit tests ---> test output of past made projects
     # implement a few File I/O's (on past projects)
-    # regexes to a few projects  (e.g: address_verifier)
     # add more classes 
-    # ...
+    # etc...
 
 
 # Packages Used:
@@ -43,4 +46,3 @@ A variety of mini-projects for practice. Please find a small description of each
     pandas ---→ https://pypi.org/project/pandas/
     pprintpp ---→ https://pypi.org/project/pprintpp/
     pyfiglet ---→ https://pypi.org/project/pyfiglet/
-    
