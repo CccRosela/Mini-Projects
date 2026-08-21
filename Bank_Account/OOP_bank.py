@@ -7,20 +7,24 @@ class BankAccount:
         if n >= 0:
             self.balance += n
             return self.balance
+        else:
+            raise ValueError
             
     def withdraw(self, n):
-        self.balance -= n
-        return self.balance
+        if n >= 0 and self.balance >= n:
+            self.balance -= n
+            return self.balance
+        else:
+            raise ValueError
 
-    
+special = BankAccount("Rosela", 1000)
 acc = input("What is your name?: ").strip().capitalize()
-user = BankAccount(acc, 0)
-# for person in accounts:
-  #  if person['name'] == user:
-  #      balance = person['balance']
-   #     break
-    #else:
-     #   balance = 0
+
+if acc == special.name:
+    user = special
+else:
+    user = BankAccount(acc, 0)
+
 print("Current Balance:", user.balance)
 
 def main():
@@ -35,7 +39,11 @@ def main():
 
             user.deposit(d)
             print(f"Balance: {user.balance}")
-
+            break
+        
+        except ValueError:
+            print("Please enter a correct amount or type `exit`.")
+        
     while True:
         try:
             w = input("\nHow much will you withdraw?: ").strip().lower()   
@@ -44,21 +52,13 @@ def main():
                 return
             else:
                 w = int(w)
-            
-            if w < 0:
-                raise ValueError    
-            
-            if user.balance >= w:
-                user.withdraw(w)
-                print(f"Final Balance: {user.balance}")
-                break
-            else:
-                raise ValueError
+
+            user.withdraw(w)
+            print(f"Final Balance: {user.balance}")
+            break
         
         except ValueError:
             print("Please enter a correct amount or type `exit`.")
-
-
 
 if __name__ == "__main__":
     main()
