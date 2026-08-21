@@ -16,28 +16,28 @@ class CoffeeMachine():
     def water(self):
         return self._water
     @water.setter
-    def water(self,value):
-        if value < 0:
+    def water(self, water):
+        if water < 0:
             raise NegativeError()
-        self._water = value
+        self._water = water
 
     @property
     def coffee(self):
         return self._coffee
     @coffee.setter
-    def coffee(self, value):
-        if value <0:
+    def coffee(self, coffee):
+        if coffee <0:
             raise NegativeError()
-        self._coffee = value
+        self._coffee = coffee
     
     @property
     def milk(self):
         return self._milk
     @milk.setter
-    def milk(self, value):
-        if value < 0:
+    def milk(self, milk):
+        if milk < 0:
             raise NegativeError()
-        self._milk = value
+        self._milk = milk
     
     def make_coffee(self, coffee_type):
         if coffee_type in types_dic.keys():
