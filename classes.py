@@ -95,3 +95,22 @@ class Stock:
 
 bitcoin = Stock("Bitcoin",10990.99, 5)
 print(f"{bitcoin.name}: {bitcoin.total_value()}")
+
+
+class Notebook:
+    def __init__(self):
+        self.notes = []
+
+    def add_note(self, note):
+        self.notes.append(note)
+
+    def __str__(self):
+        note_list = []
+        for i, note in enumerate(self.notes, start=1):
+            note_list.append(f"{i}. {note}")
+        return "\n".join(note_list)
+
+notes = Notebook()
+notes.add_note("Buy 3 Potatoes.")
+notes.add_note("Set an appointment.")
+print(notes)
