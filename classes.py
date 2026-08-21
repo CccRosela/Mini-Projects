@@ -114,3 +114,52 @@ notes = Notebook()
 notes.add_note("Buy 3 Potatoes.")
 notes.add_note("Set an appointment.")
 print(notes)
+
+
+
+class Employee:
+    def __init__(self, name, ID=None):
+        self.name = name
+        self.ID = ID
+
+class FullTimeEmployee(Employee):
+    def __init__(self, name, annual_salary, ID=None):
+        super().__init__(name, ID)
+        self.annual_salary = annual_salary
+    
+    def calculate_pay(self):
+        monthly_salary = self.annual_salary/12
+        return round(monthly_salary,2)
+    
+    def __str__(self):
+        if self.ID == None:
+            return f"{self.name}'s monthly wage: {format(self.calculate_pay(), ",")}"
+        else:
+            return f"ID: {self.ID}, {self.name}'s monthly wage: {format(self.calculate_pay(), ",")}"      
+
+class PartTimeEmployee(Employee):
+    def __init__(self, name, hours_worked, hours_rate, ID=None):
+        super().__init__(name, ID)
+        self.hours_worked = hours_worked
+        self.hours_rate = hours_rate
+    
+    def calculate_pay(self):
+        monthly_salary = self.hours_worked * self.hours_rate
+        return round(monthly_salary, 2)
+    
+    def __str__(self):
+        if self.ID == None:
+            return f"{self.name}'s monthly wage: {format(self.calculate_pay(), ",")}"
+        else:
+            return f"ID: {self.ID}, {self.name}'s monthly wage: {format(self.calculate_pay(), ",")}"      
+
+alice = FullTimeEmployee("Alice", 60000)
+print(alice)
+bob = FullTimeEmployee("Bob", 55000, 'AC42552')
+print(bob)
+
+
+maison = PartTimeEmployee("Maison", 200, 20)
+print(maison)
+sara = PartTimeEmployee("Sara", 350, 25, 'AC33321')
+print(sara)
