@@ -8,6 +8,32 @@ vehicle1 = Vehicle("Tesla Model S", 250, 18)
 print(f"Vehicle model: {vehicle1.model}, Speed: {vehicle1.max_speed}, Milage: {vehicle1.milage}")
 
 
+class User:
+    def __init__(self, user, password):
+        self.user = user
+        self.password = password
+    
+    def check_password(self, enter):
+        if self.password == enter:
+            return True
+        else:
+            raise ValueError
+
+u1 = User("Rosela","CatchMeIfYouCan4")
+tries = 0
+
+while tries < 4:
+    try:
+        enter = input("Please Enter your Password: ")
+        u1.check_password(enter)
+
+        print(f"Welcome, {u1.user}")
+        break
+    except ValueError:
+        tries += 1
+        print("The password was incorrect.\n")
+
+
 class Rectangle:
     def __init__(self, length, width):
         self.length = length
@@ -20,6 +46,31 @@ class Rectangle:
 
 rect = Rectangle(10, 4)
 print(f"Area: {rect.area()}, Perimeter: {rect.perimeter()}")
+
+
+class Light:
+    def __init__(self):
+        self.on = False
+    
+    def turn_on(self):
+        self.on = True
+    def turn_off(self):
+        self.on = False
+    def status(self):
+        if self.on == True:
+            self.state = "ON"
+            return self.state
+        else:
+            self.state = "OFF"
+            return self.state
+
+    def __str__(self):
+        return f"Light is {self.status()}."
+
+light = Light()
+print(light)
+light.turn_on()
+print(light)
 
 
 class Student:
