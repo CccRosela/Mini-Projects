@@ -2,11 +2,42 @@ class InsufficientError(Exception):
     def __str__(self):
         return f"Quantity of ingredients is not enough to make your coffee.\n"
 
+class NegativeError(Exception):
+    def __str__(self):
+        return f"You cannot set negative quantities in the machine."
+      
 class CoffeeMachine():
     def __init__(self, water=100, coffee=500, milk=1000):
         self.water = water
         self.coffee = coffee
         self.milk = milk
+    
+    @property
+    def water(self):
+        return self._water
+    @water.setter
+    def water(self,value):
+        if value < 0:
+            raise NegativeError()
+        self._water = value
+
+    @property
+    def coffee(self):
+        return self._coffee
+    @coffee.setter
+    def coffee(self, value):
+        if value <0:
+            raise NegativeError()
+        self._coffee = value
+    
+    @property
+    def milk(self):
+        return self._milk
+    @milk.setter
+    def milk(self, value):
+        if value < 0:
+            raise NegativeError()
+        self._milk = value
     
     def make_coffee(self, coffee_type):
         if coffee_type in types_dic.keys():
@@ -37,7 +68,8 @@ types_dic = {
 }
     
 
-machine1 = CoffeeMachine()
+machine1 = CoffeeMachine(water= 300)
+print("Welcome!")
 
 while True:
     try: 
