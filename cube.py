@@ -1,6 +1,8 @@
 #Rubik's Cube Challenge - https://www.101computing.net/rubiks-cube-challenge/
-import turtle, draw
 # draw will be another file imported, which is also useful for the visualization of the problem (provided in the link of the problem)
+
+import turtle, draw
+
 def rotate(array,clockwise):
    n = len(array)
    newArray = [ [ None for y in range(n) ] for x in range(n) ]

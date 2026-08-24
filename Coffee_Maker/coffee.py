@@ -66,22 +66,26 @@ types_dic = {
     "iced coffee" : {"water" : 10, "coffee" : 80, "milk" : 30}, 
     "cold brew" : {"water" : 10, "coffee" : 80, "milk" : 200} 
 }
-    
 
-machine1 = CoffeeMachine(water= 300)
-print("Welcome!")
+def main():
+    machine1 = CoffeeMachine(water= 300)
+    print("Welcome!")
+    print(coffee_choice(machine1))
 
-while True:
-    try: 
-        coffee_type = input("What type of coffee would you like?(or `exit`): ").strip().lower()
-        
-        if coffee_type == 'exit':
-            print("Have a nice day!")
-            break
-        
-        print(machine1.make_coffee(coffee_type))
-        print(machine1)
-    except ValueError:
-        print("The machine cannot make this type of coffee. Please pick something else.\n")
-    except InsufficientError: #except does not require the creation of an instance
-        print(InsufficientError())
+def coffee_choice(machine):
+    while True:
+        try: 
+            coffee_type = input("What type of coffee would you like?(or `exit`): ").strip().lower()
+            
+            if coffee_type == 'exit':
+                return "Have a nice day!"
+            
+            return machine.make_coffee(coffee_type))
+
+        except ValueError:
+            print("The machine cannot make this type of coffee. Please pick something else.\n")
+        except InsufficientError: #except does not require the creation of an instance
+            print(InsufficientError())
+
+if __name__ == "__main__":
+    main()
