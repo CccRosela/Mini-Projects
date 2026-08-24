@@ -1,17 +1,21 @@
 import re
 
-email = input("What's your email address?: ").strip()
+def validate(email):
+    if re.search(r"^\w+@(\w+\.)?\w+\.(com|gov|org|net|edu|at)$", email, re.IGNORECASE):
+        return "Valid!"
+    else:
+        return  "Invalid!"
 
-if re.search(r"^\w+@(\w+\.)?\w+\.(com|gov|org|net|edu|at)$", email, re.IGNORECASE):
-    print("Valid!")
-else:
-    print("Invalid!")
+if __name__ == "__main__":
+    email = input("What's your email address?: ").strip()
+    print(validate(email))
 
 #### Process steps: ####
 # re.search(r".+@.+\.com", email):
 # . -> if any character left or right of the address
 # + -> 1 or more repetitions
 # \ -> escape character, `\.` lets the `.` be recognised as part of the string
+
 
 # re.search(r"^.+@.+\.com$", email):
 # Entering a sentence would give us valid, so we restrict the input:

@@ -24,14 +24,14 @@ tries = 0
 
 while tries < 4:
     try:
-        enter = input("Please Enter your Password: ")
+        enter = input("\nPlease Enter your Password: ")
         u1.check_password(enter)
 
         print(f"Welcome, {u1.user}")
         break
     except ValueError:
         tries += 1
-        print("The password was incorrect.\n")
+        print("The password was incorrect.")
 
 
 class Rectangle:
@@ -45,7 +45,7 @@ class Rectangle:
         return 2*(self.length+ self.width)
 
 rect = Rectangle(10, 4)
-print(f"Area: {rect.area()}, Perimeter: {rect.perimeter()}")
+print(f"\nArea: {rect.area()}, Perimeter: {rect.perimeter()}")
 
 
 class Light:
@@ -65,7 +65,7 @@ class Light:
             return self.state
 
     def __str__(self):
-        return f"Light is {self.status()}."
+        return f"\nLight is {self.status()}."
 
 light = Light()
 print(light)
@@ -81,7 +81,7 @@ class Student:
         avg = sum(self.marks)/len(self.marks)
         return round(avg,2)
 
-s1 = Student("Simon", [55, 95, 72, 80, 87])
+s1 = Student("\nSimon", [55, 95, 72, 80, 87])
 print(f"{s1.name}'s Average Grade: {s1.average()}")
 
 
@@ -93,7 +93,7 @@ class Stock:
     def total_value(self):
         return format(self.price * self.quantity, ",")
 
-bitcoin = Stock("Bitcoin",10990.99, 5)
+bitcoin = Stock("\nBitcoin",10990.99, 5)
 print(f"{bitcoin.name}: {bitcoin.total_value()}")
 
 
@@ -133,9 +133,9 @@ class FullTimeEmployee(Employee):
     
     def __str__(self):
         if self.ID == None:
-            return f"{self.name}'s monthly wage: {format(self.calculate_pay(), ",")}"
+            return f"\n{self.name}'s monthly wage: {format(self.calculate_pay(), ",")}"
         else:
-            return f"ID: {self.ID}, {self.name}'s monthly wage: {format(self.calculate_pay(), ",")}"      
+            return f"\nID: {self.ID}, {self.name}'s monthly wage: {format(self.calculate_pay(), ",")}"      
 
 class PartTimeEmployee(Employee):
     def __init__(self, name, hours_worked, hours_rate, ID=None):

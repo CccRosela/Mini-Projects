@@ -1,4 +1,5 @@
 import itertools # used for the method below
+import numpy as np
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 def find_target(arr, target):
@@ -12,10 +13,22 @@ def find_target(arr, target):
     return 'Target not found'
 
 def main():
-    arr = [2,11,7,10,8]
-    target = 9
+  while True:
+    try:
+        arr = input("Enter your desired array: ")
+        arr = arr.split(",")
+        empty_array = []
+        for a in arr:
+            empty_array.append(int(a))
+
+        arr = np.array(empty_array)
+        target = int(input("Enter your target array: "))
+        break
+
+    except ValueError:
+        print("Please enter your array in the format: #,#,#...,#")
   
-    print(find_target(arr, target))
+  print(find_target(arr, target))
     
 if __name__ == "__main__":
     main()
