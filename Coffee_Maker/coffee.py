@@ -80,7 +80,7 @@ def coffee_choice(machine):
             if coffee_type == 'exit':
                 return "Have a nice day!"
             
-            return machine.make_coffee(coffee_type))
+            return machine.make_coffee(coffee_type)
 
         except ValueError:
             print("The machine cannot make this type of coffee. Please pick something else.\n")
