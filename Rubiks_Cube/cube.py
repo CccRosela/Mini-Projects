@@ -18,16 +18,20 @@ def rotate(array,clockwise):
    array = newArray
    
 # 2D array representing one face of a Rubik's Cube
-array = [[1, 2, 1],
-         [5, 4, 3],
-         [2, 1, 6]]
+array = [[1, 2, 1, 5],
+         [5, 4, 5, 3],
+         [2, 1, 7, 6],
+         [0, 6, 8, 2]]
 
 draw.draw(array)
 turn = input("""Would you like to rotate this grid:
      a) clockwise
-     b) anti-clockwise""")
+     b) anti-clockwise
+""")
 
 if turn == "a":
    rotate(array,True)
 else:
    rotate(array,False)
+
+turtle.done()
