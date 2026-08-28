@@ -44,7 +44,7 @@ A variety of mini-projects for practice. Please find a small description of each
     - Object-Oriented Programming <br>→ define `classes` and `instance attributes` → create `methods` for validation, calculations, and formatting → model concepts such as vehicles, users, rectangles, lights, students, stock, notes, and employees → `inheritance` with full-time and part-time employees.
 
 14. Rubiks_Cube
-    - ,....,
+    - Cube Rotation <br>→ represent one face of a Rubik's Cube as a 2D array → rotate the face `clockwise or anti-clockwise` → map each number to a color → visualize the cube face with colored squares using `turtle` graphics.
 
 15. TextFonts
     - tansforms text via fonts in package `pyfiglet`.
