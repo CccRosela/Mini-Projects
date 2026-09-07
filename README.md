@@ -40,16 +40,19 @@ A variety of mini-projects for practice. Please find a small description of each
 12. Meal_Time
     - Time Variant <br>→ time input from user→ convert `HH:MM` into decimal hours → check if it’s breakfast, lunch, or dinner time.
 
-13. OOP_Classes
+13. Morse_Code
+    - Morse Code Translation <br>→ encode messages containing letters and numbers into Morse code & decode Morse code back into text.
+
+14. OOP_Classes
     - Object-Oriented Programming <br>→ define `classes` and `instance attributes` → create `methods` for validation, calculations, and formatting → model concepts such as vehicles, users, rectangles, lights, students, stock, notes, and employees → `inheritance` with full-time and part-time employees.
 
-14. Rubiks_Cube
+15. Rubiks_Cube
     - Cube Rotation <br>→ represent one face of a Rubik's Cube as a 2D array → rotate the face `clockwise or anti-clockwise` → map each number to a color → visualize the cube face with colored squares using `turtle` graphics.
 
-15. TextFonts
+16. TextFonts
     - tansforms text via fonts in package `pyfiglet`.
 
-16. Vending_Machine
+17. Vending_Machine
     - Product selection <br>→ user chooses a `product number` → enter payment → check if the amount is enough → confirm the purchase or calculate remaining amount/change.
 
 

@@ -27,7 +27,18 @@ morseCode = {
     "Z": "--.."
 }
 
-message = input("Type a message to convert in morse code (e.g. \"SOS\"?)").upper()
+morseCode["1"] = ".----"
+morseCode["2"] = "..---"
+morseCode["3"] = "...--"
+morseCode["4"] = "....-"
+morseCode["5"] = "....."
+morseCode["6"] = "-...."
+morseCode["7"] = "--..."
+morseCode["8"] = "---.."
+morseCode["9"] = "----."
+morseCode["0"] = "-----"
+
+message = input("Type a message to convert in morse code (e.g. \"SOS\"?): ").upper()
 encodedMessage = ""
 
 for char in message:
