@@ -3,7 +3,7 @@ morseCode = {
     "B": "-...",
     "C": "-.-.",
     "D": "-..",
-    "E":  ".",
+    "E": ".",
     "F": "..-.",
     "G": "--.",
     "H": "....",
@@ -24,28 +24,47 @@ morseCode = {
     "W": ".--",
     "X": "-..-",
     "Y": "-.--",
-    "Z": "--.."
+    "Z": "--..",
+    "1": ".----",
+    "2": "..---",
+    "3": "...--",
+    "4": "....-",
+    "5": ".....",
+    "6": "-....",
+    "7": "--...",
+    "8": "---..",
+    "9": "----.",
+    "0": "-----",
 }
 
-morseCode["1"] = ".----"
-morseCode["2"] = "..---"
-morseCode["3"] = "...--"
-morseCode["4"] = "....-"
-morseCode["5"] = "....."
-morseCode["6"] = "-...."
-morseCode["7"] = "--..."
-morseCode["8"] = "---.."
-morseCode["9"] = "----."
-morseCode["0"] = "-----"
 
-message = input("Type a message to convert in morse code (e.g. \"SOS\"?): ").upper()
-encodedMessage = ""
+def encode_message(message):
+    encoded_message = ""
 
-for char in message:
-    if char in morseCode.keys():
-        encodedMessage += morseCode[char] + " "
-    else:
-        raise ValueError(f"Character '{char}' cannot be converted to morse code.")
+    for char in message.upper():
+        if char == " ":
+            encoded_message += "/ "
+            continue
 
-print(f"Encoded message: {encodedMessage}")
+        if char not in morseCode:
+            raise ValueError(f"Character '{char}' cannot be converted to morse code.")
+
+        encoded_message += morseCode[char] + " "
+
+    return encoded_message.strip()
+
+
+def main():
+    message = input('Type a message to convert in morse code (e.g. "SOS"?): ').strip()
+
+    if not message:
+        print("No message provided.")
+        return
+
+    encoded_message = encode_message(message)
+    print(f"Encoded message: {encoded_message}")
+
+
+if __name__ == "__main__":
+    main()
 
