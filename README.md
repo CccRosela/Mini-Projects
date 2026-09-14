@@ -52,11 +52,13 @@ A variety of mini-projects for practice. Please find a small description of each
 16. TextFonts
     - tansforms text via fonts in package `pyfiglet`.
 
-17. Vending_Machine
+17. UNO
+    - Simulation <br>→ create a deck of `+`, `-`, `x`, and `/` cards → shuffle and draw cards one at a time → update the balance and remaining draws → handle special cards that add or remove draws. verify if it works as intended with `pytest`.
+
+18. Vending_Machine
     - Product selection <br>→ user chooses a `product number` → enter payment → check if the amount is enough → confirm the purchase or calculate remaining amount/change.
 
 
 ## Other Ideas waiting to be implemented: U6
     # bitcoin - get API bitcoin value (maybe other funds as well, commodities [gold], derivatives, to be implemented... {depends on complexity, might require a repository by itself...}), user types in how much they want to purchase, adds it to their 'wallet'
-    # implement a few File I/O's (on past projects)
     # etc...
